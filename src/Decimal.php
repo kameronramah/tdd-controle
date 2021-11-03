@@ -8,37 +8,23 @@ class Decimal
         if($param < 0 || $param > 3000) {
             return 'La valeur spécifiée n\'est pas comprise entre 0 et 3000';
         }
-        if($param === 0) {
-            return '';
+        $array = [
+            0 => "",
+            1 => "I",
+            2 => "II",
+            3 => "III",
+            4 => "IV",
+            5 => "V",
+            6 => "VI",
+            7 => "VII",
+            8 => "VIII",
+            9 => "IX"
+        ];
+        foreach($array as $key => $value) {
+            if($key === $param) {
+                return $value;
+            }
         }
-        if($param === 1) {
-            return 'I';
-        }
-        if($param === 2) {
-            return 'II';
-        }
-        if($param === 3) {
-            return 'III';
-        }
-        if($param === 4) {
-            return 'IV';
-        }
-        if($param === 5) {
-            return 'V';
-        }
-        if($param === 6) {
-            return 'VI';
-        }
-        if($param === 7) {
-            return 'VII';
-        }
-        if($param === 8) {
-            return 'VIII';
-        }
-        if($param === 9) {
-            return 'IX';
-        }
-
        return '';
     }
 

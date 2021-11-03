@@ -8,6 +8,9 @@ class Decimal
         if($param < 0 || $param > 3000) {
             return 'La valeur spécifiée n\'est pas comprise entre 0 et 3000';
         }
+        if($param === 0) {
+            return '';
+        }
        return '';
     }
 

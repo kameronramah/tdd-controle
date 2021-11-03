@@ -11,6 +11,34 @@ class Decimal
         if($param === 0) {
             return '';
         }
+        if($param === 1) {
+            return 'I';
+        }
+        if($param === 2) {
+            return 'II';
+        }
+        if($param === 3) {
+            return 'III';
+        }
+        if($param === 4) {
+            return 'IV';
+        }
+        if($param === 5) {
+            return 'V';
+        }
+        if($param === 6) {
+            return 'VI';
+        }
+        if($param === 7) {
+            return 'VII';
+        }
+        if($param === 8) {
+            return 'VIII';
+        }
+        if($param === 9) {
+            return 'IX';
+        }
+
        return '';
     }
 

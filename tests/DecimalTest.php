@@ -31,5 +31,26 @@ class DecimalTest extends TestCase
         $this->assertEquals('X', Decimal::decimalToRoman(10));
         $this->assertEquals('XV', Decimal::decimalToRoman(15));
         $this->assertEquals('XIV', Decimal::decimalToRoman(14));
+        $this->assertEquals('XLIV', Decimal::decimalToRoman(44));
+        $this->assertEquals('XCIX', Decimal::decimalToRoman(99));
+    }
+
+    public function testThreeNumbers()
+    {
+        $this->assertEquals('CXCIX', Decimal::decimalToRoman(199));
+        $this->assertEquals('DLV', Decimal::decimalToRoman(555));
+        $this->assertEquals('CDXLIX', Decimal::decimalToRoman(449));
+        $this->assertEquals('DCLXIII', Decimal::decimalToRoman(663));
+        $this->assertEquals('CMLXXXIX', Decimal::decimalToRoman(989));
+    }
+
+    public function testFourNumbers()
+    {
+        $this->assertEquals('MCMXCIX', Decimal::decimalToRoman(1999));
+        $this->assertEquals('MMDLV', Decimal::decimalToRoman(2555));
+        $this->assertEquals('MMCDXCI', Decimal::decimalToRoman(2491));
+        $this->assertEquals('MXLV', Decimal::decimalToRoman(1045));
+        $this->assertEquals('MMCMLIV', Decimal::decimalToRoman(2954));
+        $this->assertEquals('MMCDLXXIX', Decimal::decimalToRoman(2479));
     }
 }

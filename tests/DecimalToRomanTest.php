@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-class DecimalTest extends TestCase
+class DecimalToRomanTest extends TestCase
 {
     public function testParam()
     {

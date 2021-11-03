@@ -40,4 +40,9 @@ class Decimal
         return $result;
     }
 
+    public static function romanToDecimal(): int
+    {
+        return 0;
+    }
+
 }

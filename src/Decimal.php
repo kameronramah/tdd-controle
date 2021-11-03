@@ -8,24 +8,25 @@ class Decimal
         if($param < 0 || $param > 3000) {
             return 'La valeur spécifiée n\'est pas comprise entre 0 et 3000';
         }
+        $result = '';
+        $compteur = $param;
         $array = [
-            0 => "",
-            1 => "I",
-            2 => "II",
-            3 => "III",
-            4 => "IV",
+            10 => "X",
+            9 => "IX",
             5 => "V",
-            6 => "VI",
-            7 => "VII",
-            8 => "VIII",
-            9 => "IX"
+            4 => "IV",
+            1 => "I"
         ];
-        foreach($array as $key => $value) {
-            if($key === $param) {
-                return $value;
+        do {
+            foreach($array as $key => $value) {
+                if($key <= $compteur) {
+                    $compteur -= $key;
+                    $result .= $value;
+                }
             }
-        }
-       return '';
+        } while ($compteur > 0);
+        
+        return $result;
     }
 
 }

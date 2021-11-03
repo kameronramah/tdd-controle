@@ -23,4 +23,13 @@ class DecimalTest extends TestCase
         $this->assertEquals('VIII', Decimal::decimalToRoman(8));
         $this->assertEquals('IX', Decimal::decimalToRoman(9));
     }
+
+    public function testTwoNumbers()
+    {
+        $this->assertEquals('XII', Decimal::decimalToRoman(12));
+        $this->assertEquals('XIX', Decimal::decimalToRoman(19));
+        $this->assertEquals('X', Decimal::decimalToRoman(10));
+        $this->assertEquals('XV', Decimal::decimalToRoman(15));
+        $this->assertEquals('XIV', Decimal::decimalToRoman(14));
+    }
 }
